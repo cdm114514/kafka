@@ -58,6 +58,7 @@ spotless {
 allprojects {
 
   repositories {
+    mavenLocal()
     mavenCentral()
   }
 
