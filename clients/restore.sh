@@ -1,2 +1,2 @@
 rm -rf src/main/java/
-cp -r backup/ src/main/
+cp -r backup/* src/main/java
