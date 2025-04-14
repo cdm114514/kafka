@@ -19,6 +19,7 @@ import java.nio.charset.StandardCharsets
 
 buildscript {
   repositories {
+    mavenLocal()
     mavenCentral()
     gradlePluginPortal()
     maven {
@@ -1052,6 +1053,9 @@ project(':clients') {
     testRuntime libs.jacksonDatabind
     testRuntime libs.jacksonJDK8Datatypes
     testCompile libs.jacksonJaxrsJsonProvider
+
+    // Add the knob_runtime dependency
+    implementation 'org.knobinjection:knob_runtime:1.0-SNAPSHOT'
   }
 
   task createVersionFile(dependsOn: determineCommitId) {
